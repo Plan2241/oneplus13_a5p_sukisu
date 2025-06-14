@@ -122,12 +122,8 @@ jobs:
         if: ${{inputs.enable_feature_z }}
         run: |
           cd kernel_workspace/kernel_platform/common
-          git clone --depth=1 https://github.com/Plan2241/HMBird-GKI-patch.git
-          cd HMBird-GKI-patch
+          curl -O https://raw.githubusercontent.com/Plan2241/HMBird-GKI-patch/main/boot.patch
           patch -p1 < boot.patch
-          cd ..
-          rm -rf HMBird-GKI-patch
-
  
       - name: Apply lz4kd Patches
         if: ${{inputs.enable_feature_y }}
