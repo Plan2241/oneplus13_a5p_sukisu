@@ -122,7 +122,7 @@ jobs:
         if: ${{inputs.enable_feature_z }}
         run: |
          cd kernel_workspace/kernel_platform/common
-         git clone --depth=1 https://github.com/aa123330/other.git
+         git clone --depth=1 https://github.com/Plan2241/HMBird-GKI-patch.git
          patch -p1 < boot.patch
 
  
